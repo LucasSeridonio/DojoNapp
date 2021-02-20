@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 def fizzbuzz(numero):
     if numero == 0:
         return 0
@@ -11,11 +13,12 @@ def fizzbuzz(numero):
         return numero
 
 
-for i in range(0, 100):
-    r = fizzbuzz(i)
-    print(r)
+lista_elementos = list()
 
+for i in range(0, 101):
+    print(fizzbuzz(i), end=', ')
 
+# Realizando os testes
 assert fizzbuzz(0) == 0
 assert fizzbuzz(1) == 1
 assert fizzbuzz(2) == 2
@@ -24,3 +27,5 @@ assert fizzbuzz(3) == 'fizz'
 assert fizzbuzz(5) == 'buzz'
 assert fizzbuzz(15) == 'fizzbuzz'
 assert fizzbuzz(30) == 'fizzbuzz'
+assert fizzbuzz(31) == 31
+assert fizzbuzz(100) == 'buzz'
